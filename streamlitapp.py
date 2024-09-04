@@ -1,12 +1,10 @@
 import pandas as pd
 import joblib
-import sklearn.metrics import accuracy_score
+from sklearn.metrics import accuracy_score
 from sklearn.model_selection import train_test_split
 import streamlit as st
-
 #Load the updated live modelto be made live
 model = joblib.load("liveModelV1.pkl")
-
 #Load the data to check accuracy
 data = pd.read_csv('mobile_price_range_data.csv')
 
@@ -31,7 +29,7 @@ st.write(f"Model {accuracy}")
 st.header("Real-Time Prediction")
 input_data = []
 for col in x_test.columns:
-    input_value = st.numner_input(f'Input for feature {col}', value = '')
+    input_value = st.number_input(f'Input for feature {col}', value = 0)
     input_data.append(input_value)
 
 #Convert input data to dataframe
