@@ -4,7 +4,7 @@ from sklearn.metrics import accuracy_score
 from sklearn.model_selection import train_test_split
 import streamlit as st
 #Load the updated live modelto be made live
-model = joblib.load("liveModelV1.pkl")
+model = joblib.load("liveModelV1.pk1")
 #Load the data to check accuracy
 data = pd.read_csv('mobile_price_range_data.csv')
 
